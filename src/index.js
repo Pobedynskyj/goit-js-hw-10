@@ -22,7 +22,7 @@ function inputValue(event) {
     .then((json) => {
       markup = "";
 
-      if (json.lengs > 10) {
+      if (json.length > 10) {
         return Notify.info(
           "Too many matches found. Please enter a more specific name."
         );
@@ -45,6 +45,7 @@ function inputValue(event) {
                 <p><span class="big">Capital:</span>${element.capital[0]}</p>
                 <p><span class="big">Population:</span>${element.population}</p>
                 <p><span class="big">Languages:</span>${languages}</p>`;
+          divEl.innerHTML = markup;
         });
       }
     })
