@@ -20,7 +20,7 @@ function inputValue(event) {
   }
   fetchCountries(valuesInput)
     .then((json) => {
-      markup = "";
+      let markup = "";
 
       if (json.length > 10) {
         return Notify.info(
